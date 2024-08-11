@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Lists</title>
+</head>
+<body>
+    <h1>My Item Lists</h1>
+    
+    <!-- List created using an array and JavaScript -->
+    <h2>Array-based List</h2>
+    <ul id="arrayItemList"></ul>
+
+    <!-- Static list created directly in HTML -->
+    <h2>Static List</h2>
+    <ul>
+        <li>Static Item 1</li>
+        <li>Static Item 2</li>
+        <li>Static Item 3</li>
+        <li>Static Item 4</li>
+        <li>Static Item 5</li>
+    </ul>
+
+    <script>
+        // Array of items
+        const items = ['Array Item 1', 'Array Item 2', 'Array Item 3', 'Array Item 4', 'Array Item 5'];
+
+        // Get the HTML element to display the list
+        const arrayItemList = document.getElementById('arrayItemList');
+
+        // Loop through the array and create list items
+        items.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            arrayItemList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
